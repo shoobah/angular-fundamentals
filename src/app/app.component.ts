@@ -7,8 +7,9 @@ import {Component, Inject} from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
-  constructor(
-    @Inject('mail') private mail,
-    @Inject('api') private api
-  ) {}
+  constructor(@Inject('mail') public mail, @Inject('api') public api) {}
+
+  onUpdate(id, text) {
+    this.mail.update(id, text);
+  }
 }

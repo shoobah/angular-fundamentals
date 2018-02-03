@@ -4,10 +4,11 @@ import {NgModule} from '@angular/core';
 import {AppComponent} from './app.component';
 import {SimpleFormComponent} from './simple-form/simple-form.component';
 import {MailService} from './mail.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent, SimpleFormComponent],
-  imports: [BrowserModule],
+  imports: [BrowserModule, FormsModule],
   providers: [
     {
       provide: 'mail',
